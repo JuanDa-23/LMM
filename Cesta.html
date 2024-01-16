@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paga y disfruta de lo comprado</title>
+    <style>
+        body {
+            font-family: 'Calibri', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: rgba(0, 0, 0, 0.467);
+            text-align: center;
+        }
+
+        header {
+            background-color: #4e61a0;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .fondo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        footer {
+            background-color: #3333337c;
+            color: #ffffff;
+            padding: 0.5px;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Proceso de Pago</h1>
+    </header>
+    <br></br>
+    <img class="fondo" src="fin.jpg" alt="Fondo"/>
+
+    
+        <div style="border: 2px solid #cef810; background-color: #ffffff93; padding: 4px; border-radius: 7px;">
+    <form action="/procesar_pago" method="post">
+        <label for="nombre_tarjeta">Nombre del Titular : </label>
+        <input type="text" id="nombre_tarjeta" name="nombre_tarjeta" required>
+
+        <br></br>
+
+        <label for="numero_tarjeta">Número de Tarjeta : </label>
+        <input type="text" id="numero_tarjeta" name="numero_tarjeta" pattern="\d{16}" required>
+
+        <br></br>
+
+        <label for="fecha_expiracion">Fecha de Expiración : </label>
+        <input type="text" id="fecha_expiracion" name="fecha_expiracion" placeholder="MM/AA" pattern="(0[1-9]|1[0-2])\/\d{2}" required>
+
+        <br></br>
+
+        <label for="codigo_seguridad">Código de Seguridad : </label>
+        <input type="text" id="codigo_seguridad" name="codigo_seguridad" pattern="\d{3}" required>
+
+        <br></br>
+
+        <input type="submit" value="Pagar">
+        <br></br>
+    </form>
+    </div>
+    <br></br>
+    <!--Aquí me gustaría poderlo poner a bajo del todo sin llenar esto de <br></br>-->
+    <footer>
+        <h3>Información de Contacto</h3>
+          <p>&copy; 2023 Merca Web. Todos los derechos reservados.</p>            <p>Dirección: Calle Ficticia, 123 - Ciudad Imaginaria - 12530</p>                <p>Teléfono: 633 123 467 | Email: info@merca-web.com</p>
+    </footer>
+</body>
+</html>
